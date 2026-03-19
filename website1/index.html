@@ -224,8 +224,10 @@ background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='ht
         <section class="h-screen relative flex items-center justify-center overflow-hidden bg-black">
             <!-- Darkened Construction Image -->
             <img src="hero.jpg" class="absolute inset-0 w-full h-full object-cover opacity-50 hero-img" alt="PrimeCraft Construction">
+            <!-- Extra contrast overlay for mobile readability -->
+            <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/25 to-transparent"></div>
             
-            <div class="relative z-10 text-left text-white w-full px-6 md:px-12">
+            <div class="relative z-10 text-left text-white w-full px-6 md:px-12 pt-24 md:pt-0 max-w-[780px]">
                 <div class="flex justify-start mb-6 overflow-hidden">
                     <span class="hero-fade opacity-0 text-xs md:text-sm font-medium tracking-[0.3em] uppercase border border-white/20 px-4 py-1 rounded-full backdrop-blur-sm">
                         Excellence · Precision · Perfection
@@ -240,44 +242,44 @@ background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='ht
                 </h1>
                 
                 <!-- HERO METRICS (count up) -->
-                <div class="mt-10 flex flex-wrap items-center gap-4 md:gap-6 hero-metrics opacity-0 overflow-hidden">
+                <div class="mt-10 flex flex-col md:flex-row md:items-center md:flex-wrap gap-4 md:gap-6 hero-metrics opacity-0 overflow-hidden">
                     <div class="flex items-baseline gap-2">
                         <span class="metric-value display tabular-nums text-3xl md:text-4xl font-semibold tracking-tight-custom text-white/95" data-metric data-target="20">0</span>
                         <span class="text-sm md:text-base font-medium text-white/70 uppercase tracking-widest">+ Experience</span>
                     </div>
-                    <span class="text-white/30 text-2xl">•</span>
+                    <span class="text-white/30 text-2xl hidden sm:inline">•</span>
                     <div class="flex items-baseline gap-2">
                         <span class="metric-value display tabular-nums text-3xl md:text-4xl font-semibold tracking-tight-custom text-white/95" data-metric data-target="100">0</span>
                         <span class="text-sm md:text-base font-medium text-white/70 uppercase tracking-widest">%</span>
                         <span class="text-sm md:text-base font-medium text-white/70 uppercase tracking-widest ml-1">Guarantee</span>
                     </div>
-                    <span class="text-white/30 text-2xl">•</span>
+                    <span class="text-white/30 text-2xl hidden sm:inline">•</span>
                     <div class="flex items-baseline gap-2">
                         <span class="metric-value display tabular-nums text-3xl md:text-4xl font-semibold tracking-tight-custom text-white/95" data-metric data-target="50">0</span>
                         <span class="text-sm md:text-base font-medium text-white/70 uppercase tracking-widest">+ Projects</span>
                     </div>
                 </div>
                 
-                <p class="mt-8 text-sm md:text-base font-light text-gray-300 max-w-xl mx-0 hero-fade opacity-0 leading-relaxed">
+                <p class="mt-6 md:mt-8 text-sm md:text-base font-light text-gray-300 max-w-xl mx-0 hero-fade opacity-0 leading-relaxed">
                     Construction &amp; Interior Solutions. Residential &amp; Commercial. High precision workmanship with a modern, stylish finish.
                 </p>
 
                 <!-- Differentiators -->
-                <div class="mt-10 flex flex-wrap justify-start gap-4 hero-fade opacity-0">
-                    <div class="flex items-center gap-2 text-[10px] uppercase tracking-widest text-gray-400 border border-white/10 px-3 py-1.5 rounded bg-black/20">
+                <div class="mt-8 md:mt-10 flex flex-wrap justify-start gap-3 md:gap-4 hero-fade opacity-0">
+                    <div class="flex items-center gap-2 text-[11px] sm:text-[10px] uppercase tracking-widest text-gray-400 border border-white/10 px-4 py-2 md:px-3 md:py-1.5 rounded-full bg-black/20">
                         <iconify-icon icon="solar:target-linear"></iconify-icon> High Precision
                     </div>
-                    <div class="flex items-center gap-2 text-[10px] uppercase tracking-widest text-gray-400 border border-white/10 px-3 py-1.5 rounded bg-black/20">
+                    <div class="flex items-center gap-2 text-[11px] sm:text-[10px] uppercase tracking-widest text-gray-400 border border-white/10 px-4 py-2 md:px-3 md:py-1.5 rounded-full bg-black/20">
                         <iconify-icon icon="solar:pen-new-square-linear"></iconify-icon> Modern Design
                     </div>
-                    <div class="flex items-center gap-2 text-[10px] uppercase tracking-widest text-gray-400 border border-white/10 px-3 py-1.5 rounded bg-black/20">
+                    <div class="flex items-center gap-2 text-[11px] sm:text-[10px] uppercase tracking-widest text-gray-400 border border-white/10 px-4 py-2 md:px-3 md:py-1.5 rounded-full bg-black/20">
                         <iconify-icon icon="solar:clock-circle-linear"></iconify-icon> On-Time Delivery
                     </div>
                 </div>
             </div>
             
             <!-- Scroll Indicator -->
-            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 hero-fade opacity-0 animate-bounce">
+            <div class="absolute bottom-10 left-6 md:left-1/2 -translate-x-0 md:-translate-x-1/2 hero-fade opacity-0 animate-bounce">
                 <iconify-icon icon="solar:arrow-down-linear" width="24" class="text-white/50"></iconify-icon>
             </div>
         </section>
