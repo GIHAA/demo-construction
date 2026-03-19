@@ -108,7 +108,7 @@ position: relative;
 overflow: hidden;
 display: grid;
 grid-template-columns: 1fr 1.2fr;
-border-radius: 4px; /* Slight roundness for modern feel */
+border-radius: 24px; /* Apple-like rounded corners */
 }
 .card-content {
 padding: 4rem;
@@ -159,6 +159,11 @@ justify-content: center;
 /* --- UTILS --- */
 .display { font-family: var(--font-display); }
 .tracking-tight-custom { letter-spacing: -0.04em; }
+/* Brand-ish metric numbers: subtle outline + shadow */
+.metric-value{
+  -webkit-text-stroke: 1px rgba(255,255,255,0.12);
+  text-shadow: 0 1px 0 rgba(0,0,0,0.35);
+}
 /* --- BEFORE/AFTER SLIDER --- */
 input[type=range].ba-slider {
 appearance: none;
@@ -218,28 +223,47 @@ background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='ht
         <!-- HERO SECTION -->
         <section class="h-screen relative flex items-center justify-center overflow-hidden bg-black">
             <!-- Darkened Construction Image -->
-            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&amp;w=3870&amp;auto=format&amp;fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-50 hero-img" alt="Commercial Construction">
+            <img src="hero.jpg" class="absolute inset-0 w-full h-full object-cover opacity-50 hero-img" alt="PrimeCraft Construction">
             
-            <div class="relative z-10 text-center text-white w-full px-4">
-                <div class="flex justify-center mb-6 overflow-hidden">
+            <div class="relative z-10 text-left text-white w-full px-6 md:px-12">
+                <div class="flex justify-start mb-6 overflow-hidden">
                     <span class="hero-fade opacity-0 text-xs md:text-sm font-medium tracking-[0.3em] uppercase border border-white/20 px-4 py-1 rounded-full backdrop-blur-sm">
                         Excellence · Precision · Perfection
                     </span>
                 </div>
                 
                 <h1 class="display text-[10vw] md:text-[8vw] leading-[0.9] font-medium tracking-tight-custom hero-text overflow-hidden text-white/90">
-                    <span class="block translate-y-full">BUILD YOUR</span>
+                    <span class="block">BUILD YOUR</span>
                 </h1>
                 <h1 class="display text-[10vw] md:text-[8vw] leading-[0.9] font-medium tracking-tight-custom hero-text overflow-hidden text-white/90">
-                    <span class="block translate-y-full">DREAMS</span>
+                    <span class="block">DREAMS</span>
                 </h1>
                 
-                <p class="mt-8 text-sm md:text-base font-light text-gray-300 max-w-lg mx-auto hero-fade opacity-0 leading-relaxed">
+                <!-- HERO METRICS (count up) -->
+                <div class="mt-10 flex flex-wrap items-center gap-4 md:gap-6 hero-metrics opacity-0 overflow-hidden">
+                    <div class="flex items-baseline gap-2">
+                        <span class="metric-value display tabular-nums text-3xl md:text-4xl font-semibold tracking-tight-custom text-white/95" data-metric data-target="20">0</span>
+                        <span class="text-sm md:text-base font-medium text-white/70 uppercase tracking-widest">+ Experience</span>
+                    </div>
+                    <span class="text-white/30 text-2xl">•</span>
+                    <div class="flex items-baseline gap-2">
+                        <span class="metric-value display tabular-nums text-3xl md:text-4xl font-semibold tracking-tight-custom text-white/95" data-metric data-target="100">0</span>
+                        <span class="text-sm md:text-base font-medium text-white/70 uppercase tracking-widest">%</span>
+                        <span class="text-sm md:text-base font-medium text-white/70 uppercase tracking-widest ml-1">Guarantee</span>
+                    </div>
+                    <span class="text-white/30 text-2xl">•</span>
+                    <div class="flex items-baseline gap-2">
+                        <span class="metric-value display tabular-nums text-3xl md:text-4xl font-semibold tracking-tight-custom text-white/95" data-metric data-target="50">0</span>
+                        <span class="text-sm md:text-base font-medium text-white/70 uppercase tracking-widest">+ Projects</span>
+                    </div>
+                </div>
+                
+                <p class="mt-8 text-sm md:text-base font-light text-gray-300 max-w-xl mx-0 hero-fade opacity-0 leading-relaxed">
                     Construction &amp; Interior Solutions. Residential &amp; Commercial. High precision workmanship with a modern, stylish finish.
                 </p>
 
                 <!-- Differentiators -->
-                <div class="mt-10 flex flex-wrap justify-center gap-4 hero-fade opacity-0">
+                <div class="mt-10 flex flex-wrap justify-start gap-4 hero-fade opacity-0">
                     <div class="flex items-center gap-2 text-[10px] uppercase tracking-widest text-gray-400 border border-white/10 px-3 py-1.5 rounded bg-black/20">
                         <iconify-icon icon="solar:target-linear"></iconify-icon> High Precision
                     </div>
@@ -391,13 +415,13 @@ background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='ht
                             <div>
                                 <div class="text-sm font-mono mb-6 text-gray-500 border border-white/20 inline-block px-2 py-1 rounded">02</div>
                                 <h3 class="text-2xl md:text-3xl font-medium display tracking-tight-custom">Ceiling Solutions</h3>
-                                <p class="text-sm mt-2 text-gray-500 uppercase tracking-widest">Gypsum · I-Panel · 2×2 · Custom</p>
+                                <p class="text-sm mt-2 text-gray-500 uppercase tracking-widest">Gypsum · 2×2 · I-Panel · PVC · Solar</p>
                             </div>
                             <div class="text-gray-400 font-light text-sm md:text-base leading-relaxed">
-                                Our signature service. Elegant gypsum ceilings, I-panel and 2×2 systems, and fully custom modern ceiling designs with integrated LED mood lighting for luxury-inspired spaces.
+                                Our signature service: gypsum ceiling (modern designs), 2×2 ceiling systems, I-panel ceilings, and PVC ceilings with decorative ceiling lighting integration. We also provide solar system installation (on-grid &amp; off-grid), solar maintenance &amp; upgrades, and energy-saving consultation for efficient, future-ready homes.
                             </div>
                             <div class="flex items-center gap-2 text-xs uppercase tracking-widest pt-4 border-t border-white/10">
-                                <iconify-icon icon="solar:lightbulb-linear"></iconify-icon> Integrated LED Lighting
+                                <iconify-icon icon="solar:lightbulb-linear"></iconify-icon> Decorative LED Ceiling Lighting
                             </div>
                         </div>
                         <div class="card-img-wrap">
@@ -413,13 +437,58 @@ background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='ht
                             <div>
                                 <div class="text-sm font-mono mb-6 text-gray-500 border border-white/20 inline-block px-2 py-1 rounded">03</div>
                                 <h3 class="text-2xl md:text-3xl font-medium display tracking-tight-custom">Design, Electrical &amp; Finishing</h3>
-                                <p class="text-sm mt-2 text-gray-500 uppercase tracking-widest">Plans · Wiring · Painting</p>
+                                <p class="text-sm mt-2 text-gray-500 uppercase tracking-widest">Electrical Plans · Wiring · Lighting</p>
                             </div>
                             <div class="text-gray-400 font-light text-sm md:text-base leading-relaxed">
-                                Full-service delivery: architectural house plans, interior &amp; exterior concept design, professional wiring installations, lighting systems, and premium seamless interior and exterior painting.
+                                <div class="space-y-3">
+                                    <p>
+                                        Full-service electrical delivery with professional drawing support for clean, safe, and future-ready installations.
+                                    </p>
+
+                                    <div class="space-y-2">
+                                        <div class="flex items-start gap-2">
+                                            <span class="text-white/30 mt-1">•</span>
+                                            <span>Full house electrical wiring: rewiring &amp; renovations</span>
+                                        </div>
+                                        <div class="flex items-start gap-2">
+                                            <span class="text-white/30 mt-1">•</span>
+                                            <span>Lighting installation (indoor &amp; outdoor), socket &amp; switch installation</span>
+                                        </div>
+                                        <div class="flex items-start gap-2">
+                                            <span class="text-white/30 mt-1">•</span>
+                                            <span>Distribution board (DB) installation, three-phase &amp; single-phase systems</span>
+                                        </div>
+                                        <div class="flex items-start gap-2">
+                                            <span class="text-white/30 mt-1">•</span>
+                                            <span>Generator &amp; backup system wiring, electrical maintenance &amp; troubleshooting</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="pt-3 border-t border-white/10">
+                                        <div class="text-gray-300 text-sm font-light mb-2">Electrical Drawing Services</div>
+                                        <div class="space-y-2">
+                                            <div class="flex items-start gap-2">
+                                                <span class="text-white/30 mt-1">•</span>
+                                                <span>Electrical layout drawings</span>
+                                            </div>
+                                            <div class="flex items-start gap-2">
+                                                <span class="text-white/30 mt-1">•</span>
+                                                <span>Wiring diagrams (SLD)</span>
+                                            </div>
+                                            <div class="flex items-start gap-2">
+                                                <span class="text-white/30 mt-1">•</span>
+                                                <span>Panel board drawings + load calculations</span>
+                                            </div>
+                                            <div class="flex items-start gap-2">
+                                                <span class="text-white/30 mt-1">•</span>
+                                                <span>Shop drawings for site work, as-built drawings, and 3D electrical planning</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="flex items-center gap-2 text-xs uppercase tracking-widest pt-4 border-t border-white/10">
-                                <iconify-icon icon="solar:paint-roller-linear"></iconify-icon> Seamless Finishes
+                                <iconify-icon icon="solar:bolt-linear"></iconify-icon> Electrical Wiring &amp; Drawings
                             </div>
                         </div>
                         <div class="card-img-wrap">
@@ -428,6 +497,105 @@ background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='ht
                     </div>
                 </div>
 
+                <!-- Service 4 -->
+                <div class="card-item">
+                    <div class="card-inner">
+                        <div class="card-content">
+                            <div>
+                                <div class="text-sm font-mono mb-6 text-gray-500 border border-white/20 inline-block px-2 py-1 rounded">04</div>
+                                <h3 class="text-2xl md:text-3xl font-medium display tracking-tight-custom">Electrical Wiring &amp; Drawings</h3>
+                                <p class="text-sm mt-2 text-gray-500 uppercase tracking-widest">Layout · Wiring Diagrams · Load Calculations</p>
+                            </div>
+                            <div class="text-gray-400 font-light text-sm md:text-base leading-relaxed">
+                                Professional electrical planning with clean wiring execution. We create electrical layout drawings, SLD wiring diagrams, panel board drawings, and load calculations—so your installation is safe, organized, and future-ready.
+                            </div>
+                            <div class="flex items-center gap-2 text-xs uppercase tracking-widest pt-4 border-t border-white/10">
+                                <iconify-icon icon="solar:bill-list-linear"></iconify-icon> Safe Planning &amp; Execution
+                            </div>
+                        </div>
+                        <div class="card-img-wrap">
+                            <img src="service4.png" class="card-img" alt="Electrical Wiring & Drawings">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- WHY CHOOSE PRIMECRAFT SECTION -->
+        <section id="why" class="py-24 bg-[#F5F5F5] border-b border-gray-200">
+            <div class="max-w-[1400px] mx-auto px-6">
+                <div class="text-center mb-16">
+                    <div class="text-xs uppercase tracking-[0.2em] mb-4 text-gray-500">Why Choose PrimeCraft Construction</div>
+                    <h2 class="display text-4xl md:text-6xl font-medium tracking-tight-custom">Better materials. Safer work. Lasting value.</h2>
+                    <p class="max-w-2xl mx-auto text-gray-600 font-light mt-6 leading-relaxed">
+                        PrimeCraft delivers premium electrical and ceiling solutions with clean execution, professional drawings, and safety-first standards.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white border border-gray-200 rounded-3xl p-7 shadow-sm">
+                        <div class="flex items-center gap-3 mb-3">
+                            <h3 class="text-xl font-medium text-gray-900">1. High-Quality Materials</h3>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed">
+                            We don’t use low-grade wires or cheap fittings. We use safe, durable, and certified materials to protect your home and investment.
+                        </p>
+                    </div>
+
+                    <div class="bg-white border border-gray-200 rounded-3xl p-7 shadow-sm">
+                        <div class="flex items-center gap-3 mb-3">
+                            <h3 class="text-xl font-medium text-gray-900">2. Skilled &amp; Experienced Workmanship</h3>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed">
+                            Clean wiring systems, proper load balancing, and long-lasting installations. Result: fewer faults and fewer repairs.
+                        </p>
+                    </div>
+
+                    <div class="bg-white border border-gray-200 rounded-3xl p-7 shadow-sm">
+                        <div class="flex items-center gap-3 mb-3">
+                            <h3 class="text-xl font-medium text-gray-900">3. Professional Electrical Drawings</h3>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed">
+                            Accurate layouts, safe load calculations, and future expansion-ready planning. This reduces mistakes and saves money long-term.
+                        </p>
+                    </div>
+
+                    <div class="bg-white border border-gray-200 rounded-3xl p-7 shadow-sm">
+                        <div class="flex items-center gap-3 mb-3">
+                            <h3 class="text-xl font-medium text-gray-900">4. Safety First</h3>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed">
+                            Cheap electrical work can create fire risk. We follow proper standards to prevent overload issues, ensure safe panel board setup, and proper earthing systems.
+                        </p>
+                    </div>
+
+                    <div class="bg-white border border-gray-200 rounded-3xl p-7 shadow-sm">
+                        <div class="flex items-center gap-3 mb-3">
+                            <h3 class="text-xl font-medium text-gray-900">5. Long-Term Cost Saving</h3>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed">
+                            Low price can lead to more repairs later. Our quality work means less maintenance, longer lifespan, and better value for money.
+                        </p>
+                    </div>
+
+                    <div class="bg-white border border-gray-200 rounded-3xl p-7 shadow-sm">
+                        <div class="flex items-center gap-3 mb-3">
+                            <h3 class="text-xl font-medium text-gray-900">6. Neat &amp; Professional Finish</h3>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed">
+                            Organized wiring, clean ceiling integration, and a modern final look—perfect for high-end houses and commercial projects.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mt-10 text-center">
+                    <div class="inline-flex items-center gap-3 bg-gray-900 text-white px-6 py-3 rounded-full shadow-sm">
+                        <iconify-icon icon="solar:bolt-linear" class="text-white"></iconify-icon>
+                        <span class="font-medium">We are not the cheapest — we deliver the best quality</span>
+                    </div>
+                        <!-- Removed explanation text as requested -->
+                </div>
             </div>
         </section>
 
@@ -531,7 +699,9 @@ background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='ht
         });
 
         // --- LOADER ---
+        // Keep showing the loader until all images/fonts are ready.
         const loadTl = gsap.timeline({
+            paused: true,
             onComplete: () => {
                 document.body.style.opacity = 1;
                 initSite();
@@ -542,15 +712,102 @@ background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='ht
               .to('.loader-text', { y: -50, opacity: 0, duration: 0.5 })
               .to('.loader', { yPercent: -100, duration: 0.8, ease: 'power4.inOut' });
 
+        function waitForAssets() {
+            const imgs = Array.from(document.images || []);
+            const imgPromises = imgs.map((img) => {
+                return new Promise((resolve) => {
+                    const done = () => resolve(true);
+                    if (img.complete) return done();
+                    img.addEventListener('load', done, { once: true });
+                    img.addEventListener('error', done, { once: true });
+                });
+            });
+
+            // Wait for fonts too (helps avoid layout shift)
+            const fontsPromise = (document.fonts && document.fonts.ready)
+                ? document.fonts.ready.catch(() => {})
+                : Promise.resolve();
+
+            return Promise.allSettled([...imgPromises, fontsPromise]).then(() => {});
+        }
+
+        waitForAssets().then(() => {
+            loadTl.play();
+        });
+
         function initSite() {
             // Hero Animations
-            gsap.to('.hero-text span', { 
-                y: 0, 
-                stagger: 0.1, 
-                duration: 1.5, 
-                ease: 'power4.out' 
-            });
+            // Apple-style headline reveal: left-to-right wipe in
+            gsap.fromTo(
+                '.hero-text span',
+                {
+                    xPercent: -20,
+                    y: 0,
+                    opacity: 0,
+                    scaleX: 0.2,
+                    transformOrigin: 'left center',
+                    filter: 'blur(10px)'
+                },
+                {
+                    xPercent: 0,
+                    y: 0,
+                    opacity: 1,
+                    scaleX: 1,
+                    transformOrigin: 'left center',
+                    filter: 'blur(0px)',
+                    stagger: 0.16,
+                    duration: 1.0,
+                    ease: 'power4.out'
+                }
+            );
             gsap.to('.hero-fade', { opacity: 1, y: 0, stagger: 0.1, duration: 1, delay: 0.5 });
+            
+            // --- HERO METRICS COUNT-UP ---
+            const metricEls = document.querySelectorAll('[data-metric][data-target]');
+            const reduceMotionForMetrics = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            // Metrics slide in from left (wipe style)
+            if (!reduceMotionForMetrics) {
+                gsap.fromTo(
+                    '.hero-metrics',
+                    {
+                        opacity: 0,
+                        x: -40,
+                        clipPath: 'inset(0 100% 0 0)',
+                        webkitClipPath: 'inset(0 100% 0 0)'
+                    },
+                    {
+                        opacity: 1,
+                        x: 0,
+                        clipPath: 'inset(0 0 0 0)',
+                        webkitClipPath: 'inset(0 0 0 0)',
+                        duration: 0.95,
+                        ease: 'power4.out',
+                        delay: 0.55
+                    }
+                );
+            } else {
+                gsap.set('.hero-metrics', { opacity: 1, x: 0 });
+            }
+
+            metricEls.forEach((el, i) => {
+                const target = Number(el.dataset.target || 0);
+                if (reduceMotionForMetrics) {
+                    el.textContent = String(target);
+                    return;
+                }
+
+                const counter = { val: 0 };
+                gsap.to(counter, {
+                    val: target,
+                    duration: 2.8,
+                    delay: 0.65 + i * 0.18,
+                    ease: 'power3.out',
+                    onUpdate: () => {
+                        el.textContent = String(Math.round(counter.val));
+                    }
+                });
+            });
             
             // Hero Parallax
             gsap.to('.hero-img', {
@@ -601,6 +858,48 @@ background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='ht
                     });
                 }
             });
+
+            // --- APPLE-STYLE SUBTLE MOTION (reveal + lift) ---
+            const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            const revealEase = 'power3.out';
+
+            // Fade-in the centered header pill + CTA button after loader
+            gsap.fromTo('nav', { opacity: 0, y: -12 }, { opacity: 1, y: 0, duration: 0.8, ease: revealEase });
+
+            // Before/After slider header reveal
+            gsap.fromTo('#ba-container', 
+                { opacity: 0, y: 26, filter: 'blur(6px)' },
+                { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.9, ease: revealEase, scrollTrigger: { trigger: '#ba-container', start: 'top 85%' } }
+            );
+
+            // Why Choose cards reveal (staggered)
+            if (!reduceMotion) {
+                const whyCards = gsap.utils.toArray('#why .bg-white.border.border-gray-200.p-7');
+                whyCards.forEach((el, idx) => {
+                    gsap.fromTo(el, 
+                        { opacity: 0, y: 22, filter: 'blur(8px)' },
+                        { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.85, ease: revealEase, delay: idx * 0.04,
+                          scrollTrigger: { trigger: el, start: 'top 88%' }
+                        }
+                    );
+                });
+
+                // Subtle hover lift on why cards (keeps your existing card hover behavior intact)
+                whyCards.forEach((el) => {
+                    el.addEventListener('mouseenter', () => {
+                        gsap.to(el, { y: -6, duration: 0.25, ease: 'power2.out' });
+                    });
+                    el.addEventListener('mouseleave', () => {
+                        gsap.to(el, { y: 0, duration: 0.25, ease: 'power2.out' });
+                    });
+                });
+            }
+
+            // CTA section reveal (headline + copy)
+            gsap.fromTo('section.py-32.bg-[#F5F5F5].text-center > h2, section.py-32.bg-[#F5F5F5].text-center > div',
+                { opacity: 0, y: 22, filter: 'blur(6px)' },
+                { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.9, ease: revealEase, scrollTrigger: { trigger: 'section.py-32.bg-[#F5F5F5].text-center', start: 'top 85%' } }
+            );
 
             // Footer Reveal Effect
             gsap.from('.footer-sticky > div', {
