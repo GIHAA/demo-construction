@@ -195,13 +195,20 @@ background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='ht
     </div>
 
     <!-- NAVIGATION -->
-    <nav class="fixed top-0 w-full px-6 py-4 md:px-12 flex items-center justify-center z-50 text-white">
-        <div class="hidden md:flex items-center gap-1 bg-black/40 backdrop-blur-md border border-white/10 rounded-full px-2 py-2">
-            <a href="#" class="px-5 py-1.5 text-xs font-medium uppercase tracking-widest text-gray-300 hover:text-white hover:bg-white/10 rounded-full transition-all">Home</a>
-            <a href="#" onclick="event.preventDefault(); alert('Not implemented yet')" class="px-5 py-1.5 text-xs font-medium uppercase tracking-widest text-gray-300 hover:text-white hover:bg-white/10 rounded-full transition-all">Our Projects</a>
-            <a href="#" onclick="event.preventDefault(); alert('Not implemented yet')" class="px-5 py-1.5 text-xs font-medium uppercase tracking-widest text-gray-300 hover:text-white hover:bg-white/10 rounded-full transition-all">About Us</a>
-            <a href="#" onclick="event.preventDefault(); alert('Not implemented yet')" class="px-5 py-1.5 text-xs font-medium uppercase tracking-widest text-gray-300 hover:text-white hover:bg-white/10 rounded-full transition-all">Contact</a>
+    <nav class="fixed top-0 w-full px-6 py-4 md:py-5 md:px-12 flex justify-between items-center z-50 text-white gap-4">
+        <a href="#" class="display shrink-0 flex items-center" aria-label="PrimeCraft Construction home">
+            <img src="logo.png" alt="PrimeCraft Construction" class="h-12 md:h-16 w-auto max-w-[240px] md:max-w-[280px] object-contain object-left drop-shadow-md">
+        </a>
+        <div class="hidden md:flex flex-1 justify-center items-center min-w-0">
+            <div class="flex items-center gap-1 bg-black/40 backdrop-blur-md border border-white/10 rounded-full px-2 py-2">
+                <a href="#about" class="px-5 py-1.5 text-xs font-medium uppercase tracking-widest text-gray-300 hover:text-white hover:bg-white/10 rounded-full transition-all">About</a>
+                <a href="#services" class="px-5 py-1.5 text-xs font-medium uppercase tracking-widest text-gray-300 hover:text-white hover:bg-white/10 rounded-full transition-all">Services</a>
+                <a href="#contact" class="px-5 py-1.5 text-xs font-medium uppercase tracking-widest text-gray-300 hover:text-white hover:bg-white/10 rounded-full transition-all">Contact</a>
+            </div>
         </div>
+        <a href="#contact" class="hidden md:inline-flex shrink-0 bg-white text-black px-5 py-2 text-xs uppercase tracking-widest font-medium hover:bg-gray-200 transition-colors rounded-full">
+            Get in touch
+        </a>
     </nav>
 
     <!-- MAIN CONTENT WRAPPER -->
